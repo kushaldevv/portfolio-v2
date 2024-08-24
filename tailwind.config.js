@@ -8,8 +8,13 @@ export default {
     extend: {
       colors: {
         navbar: '#1A0B2E',
-        accent: '#7127BA'
+        accent: '#7127BA',
+        purpleStart: '#763CAC',
+        purpleEnd: '#320F85',
       },
+      fontFamily: {
+        'fugaz': ['Fugaz One', 'sans-serif']
+      }
     },
   },
   plugins: [],
