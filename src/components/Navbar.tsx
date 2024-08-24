@@ -159,7 +159,7 @@ const Logo = () => {
     <div className="perspective-1000 ">
       <AnimatedLink
         href="/"
-        className="font-fugaz text-3xl"
+        className="font-fugaz text-4xl "
       >
         <motion.span
           className="inline-block"
