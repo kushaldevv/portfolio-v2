@@ -1,6 +1,6 @@
 "use client";
 
-import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
+import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
@@ -9,13 +9,15 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-navbar fixed w-full z-50">
+    <header className="bg-navbar fixed z-50 w-full">
       <nav
         aria-label="Global"
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
       >
         <div className="flex lg:flex-1">
-          <Logo />
+          <AnimatedLink href="#">
+            <span className="font-fugaz text-4xl">KD</span>
+          </AnimatedLink>
         </div>
         <div className="flex lg:hidden">
           {!mobileMenuOpen && (
@@ -25,20 +27,17 @@ export default function Navbar() {
               className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
             >
               <span className="sr-only">Open main menu</span>
-              <Bars3Icon
-                aria-hidden="true"
-                className="h-6 w-6"
-              />
+              <Bars3Icon aria-hidden="true" className="h-6 w-6" />
             </button>
           )}
         </div>
-        <div className="hidden lg:flex lg:gap-x-12 text-white">
+        <div className="hidden text-white lg:flex lg:gap-x-12">
           <AnimatedLink href="#">Projects</AnimatedLink>
           <AnimatedLink href="#">Tools</AnimatedLink>
           <AnimatedLink href="#">Resume</AnimatedLink>
           <AnimatedLink href="#">Contact</AnimatedLink>
         </div>
-        <div className="hidden lg:flex lg:flex-1  items-center lg:justify-end space-x-5">
+        <div className="hidden items-center space-x-5 lg:flex lg:flex-1 lg:justify-end">
           <SocialIcons />
         </div>
       </nav>
@@ -57,11 +56,14 @@ export default function Navbar() {
               animate={{ x: -2 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", stiffness: 300, damping: 40 }}
-              className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-navbar px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-accent/50"
+              className="bg-navbar sm:ring-accent/50 fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1"
             >
               <DialogPanel>
                 <div className="flex items-center justify-between">
-                  <Logo />
+                  <AnimatedLink href="#">
+                    <a className="font-fugaz text-4xl">KD</a>
+                  </AnimatedLink>
+
                   {mobileMenuOpen && (
                     <button
                       type="button"
@@ -69,10 +71,7 @@ export default function Navbar() {
                       className="-m-2.5 rounded-md p-2.5 text-white"
                     >
                       <span className="sr-only">Close menu</span>
-                      <XMarkIcon
-                        aria-hidden="true"
-                        className="h-6 w-6"
-                      />
+                      <XMarkIcon aria-hidden="true" className="h-6 w-6" />
                     </button>
                   )}
                 </div>
@@ -81,25 +80,25 @@ export default function Navbar() {
                   <div className="space-y-2 py-6 text-white">
                     <a
                       href="#"
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  hover:bg-accent/50"
+                      className="hover:bg-accent/50 -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7"
                     >
                       Projects
                     </a>
                     <a
                       href="#"
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  hover:bg-accent/50"
+                      className="hover:bg-accent/50 -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7"
                     >
                       Tools
                     </a>
                     <a
                       href="#"
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  hover:bg-accent/50"
+                      className="hover:bg-accent/50 -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7"
                     >
                       Resume
                     </a>
                     <a
                       href="#"
-                      className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 hover:bg-accent/50"
+                      className="hover:bg-accent/50 -mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7"
                     >
                       Contact
                     </a>
@@ -118,75 +117,75 @@ export default function Navbar() {
   );
 }
 
-const UnderLineAnimation = () => {
-  return (
-    <motion.span
-      className="absolute bottom-0 left-0 w-full h-0.5 bg-accent"
-      variants={{
-        initial: { scaleX: 0 },
-        hover: { scaleX: 1 },
-      }}
-      transition={{ duration: 0.25, ease: "easeInOut" }}
-    />
-  );
-};
+// const UnderLineAnimation = () => {
+//   return (
+//     <motion.span
+//       className="absolute bottom-0 left-0 w-full h-0.5 bg-accent"
+//       variants={{
+//         initial: { scaleX: 0 },
+//         hover: { scaleX: 1 },
+//       }}
+//       transition={{ duration: 0.25, ease: "easeInOut" }}
+//     />
+//   );
+// };
 
-const AnimatedLink = ({
-  href,
-  children,
-  className,
-}: {
-  href: string;
-  children: any;
-  className?: string;
-}) => {
+const AnimatedLink = ({ href, children }: { href: string; children: any }) => {
   return (
     <motion.a
       href={href}
-      className={`relative text-sm font-semibold leading-6 ${className}`}
+      className={`relative text-sm font-semibold leading-6`}
       whileHover="hover"
       initial="initial"
       style={{ transformStyle: "preserve-3d" }}
     >
       {children}
-      <UnderLineAnimation />
+      <motion.span
+        className="bg-accent absolute bottom-0 left-0 h-0.5 w-full"
+        variants={{
+          initial: { scaleX: 0 },
+          hover: { scaleX: 1 },
+        }}
+        transition={{ duration: 0.25, ease: "easeInOut" }}
+      />
     </motion.a>
   );
 };
 
-const Logo = () => {
-  return (
-    <div className="perspective-1000 ">
-      <AnimatedLink
-        href="/"
-        className="font-fugaz text-4xl "
-      >
-        <motion.span
-          className="inline-block"
-          variants={{
-            initial: { rotateX: 0 },
-            hover: { rotateX: 180 },
-          }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          style={{ backfaceVisibility: "hidden" }}
-        >
-          KD
-        </motion.span>
-        <motion.span
-          className="absolute inset-0 text-accent flex items-center justify-center"
-          variants={{
-            initial: { rotateX: -180 },
-            hover: { rotateX: 0 },
-          }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          style={{ backfaceVisibility: "hidden" }}
-        >
-          KD
-        </motion.span>
-      </AnimatedLink>
-    </div>
-  );
-};
+// const Logo = ({}) => {
+//   return (
+//     <div className="font-fugaz">
+//       <AnimatedLink
+//         href="/"
+//         isLogo
+//       >
+//         <motion.span
+//           className="inline-block"
+//           variants={{
+//             initial: { rotateX: 0 },
+//             hover: { rotateX: 180 },
+//           }}
+//           transition={{ duration: 0.5, ease: "easeInOut" }}
+//           style={{ backfaceVisibility: "hidden" }}
+//         >
+//           KD
+//         </motion.span>
+//         <motion.span
+//           className="absolute inset-0 text-accent flex items-center justify-center "
+//           variants={{
+//             initial: { rotateX: -180 },
+//             hover: { rotateX: 0 },
+//           }}
+//           transition={{ duration: 0.5, ease: "easeInOut" }}
+//           style={{ backfaceVisibility: "hidden" }}
+//         >
+//           KD
+//         </motion.span>
+//       </AnimatedLink>
+//     </div>
+//   );
+// };
+
 const SocialIcons = () => {
   return (
     <>
@@ -317,12 +316,7 @@ const SocialIcons = () => {
               strokeWidth="2"
               d="M30,11H18c-3.9,0-7,3.1-7,7v12c0,3.9,3.1,7,7,7h12c3.9,0,7-3.1,7-7V18C37,14.1,33.9,11,30,11z"
             ></path>
-            <circle
-              cx="31"
-              cy="16"
-              r="1"
-              fill="#fff"
-            ></circle>
+            <circle cx="31" cy="16" r="1" fill="#fff"></circle>
           </g>
           <g>
             <circle

@@ -1,65 +1,39 @@
-import React from "react";
-import PurpleGradient from "../assets/PurpleGradient.svg";
+import RadialGradient from "./RadialGradient";
+
 function Hero() {
   return (
-    <div className="relative isolate px-6 pt-14 lg:px-8">
-      <div className="mx-auto max-w-5xl py-32 sm:py-48 lg:py-56">
+    <section className="px-6 py-32 pt-14 sm:py-48 lg:px-8 lg:py-56 h-dvh">
+      <div className="mx-auto max-w-5xl">
         <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-20">
-          <>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={600}
-              height={600}
-              viewBox="50 -50 500 500"
-              fill="none"
-              className="absolute"
-            >
-              <ellipse
-                cx="192.5"
-                cy="215.5"
-                rx="192.5"
-                ry="215.5"
-                fill="url(#paint0_radial_16_10)"
-              />
-              <defs>
-                <radialGradient
-                  id="paint0_radial_16_10"
-                  cx="0"
-                  cy="0"
-                  r="1"
-                  gradientUnits="userSpaceOnUse"
-                  gradientTransform="translate(192.5 215.5) rotate(90) scale(215.5 192.5)"
-                >
-                  <stop stop-color="#763CAC" />
-                  <stop
-                    offset="1"
-                    stop-color="#320F85"
-                    stop-opacity="0"
-                  />
-                </radialGradient>
-              </defs>
-            </svg>
+          <div className="relative mx-auto my-auto mb-8 aspect-square w-full max-w-[275px] items-center lg:mx-0 lg:mb-0">
+            <div className="absolute inset-0 z-10 translate-x-[-20%] translate-y-[-20%]">
+              <RadialGradient width={400} height={400} className="absolute" />
+              <RadialGradient width={400} height={400} className="absolute opacity-25" />
+            </div>
             <img
-              src="https://avatars.githubusercontent.com/u/67920321?v=4"
-              className="w-52 h-52 rounded-full object-cover z-10 self-center opacity-95"
+              src="https://i.ibb.co/MZ4M0yv/pfp.png"
+              // src='pfp.png'
+              className="relative z-20 mt-16 h-3/4 w-3/4 rounded-full object-cover opacity-75 sm:mt-0 sm:h-full sm:w-full"
               alt="Kushal's avatar"
             />
-          </>
+          </div>
           <div className="text-left">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white">
+            <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-6xl">
               Hello, I'm <span className="text-accent">Kushal</span> 👋 .
             </h1>
             <p className="mt-6 text-xl leading-8 text-gray-300">
-              I'm a <b>Software Engineer</b> based in Maryland, driven by the challenge of
-              transforming concepts into innovative software solutions.
+              I'm a <strong>Software Engineer</strong> based in Maryland, driven
+              by the challenge of transforming concepts into innovative software
+              solutions.
               <br />
-              Dive into my latest experience, projects, and education, where I showcase my expertise
-              in creating cutting-edge technology across various platforms.
+              Dive into my latest experience, projects, and education, where I
+              showcase my expertise in creating cutting-edge technology across
+              various platforms.
             </p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
