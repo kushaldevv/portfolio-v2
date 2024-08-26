@@ -1,6 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.fugaz-one-regular {
+  font-family: "Fugaz One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -9,7 +18,7 @@
 
   color-scheme: dark;
   /* color: rgba(255, 255, 255, 0.87); */
-  background-color: #11071F;
+  background-color: #0f061b;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

@@ -1,17 +1,17 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import Navbar from "./components/Navbar";
-
+import Hero from "./components/Hero";
+import Project from "./components/Project";
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div>
-      <Navbar/>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </div>
+    <>
+      <Navbar />
+      <Hero />
+      <Project />   
+      <div className="mx-auto flex max-w-7xl text-center bg-slate-400 p-6 lg:px-8">
+        <a>footer</a>
+      </div>
+    </>
   );
 }
 
