@@ -7,9 +7,13 @@ function App() {
     <>
       <Navbar />
       <Hero />
-      <Project />   
-      <div className="mx-auto flex max-w-7xl text-center bg-slate-400 p-6 lg:px-8">
-        <a>footer</a>
+      <Project />
+      <div className="mx-auto flex max-w-7xl p-12 lg:px-8">
+        <a className="self-center text-center w-full">
+          © 2024 Kushal Devkota. All rights reserved
+          <br />
+          Built with ❤️ in Maryland, US
+        </a>
       </div>
     </>
   );

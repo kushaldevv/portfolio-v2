@@ -32,7 +32,7 @@ function Project() {
         test
         
         <div className="absolute  z-10 bg-red-500">
-          <RadialGradient width={400} height={400} className="absolute" />
+          {/* <RadialGradient width={400} height={400} className="absolute" /> */}
         </div>
       </div>
     </div>
