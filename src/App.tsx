@@ -2,6 +2,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Project from "./components/Project";
+import Contact from "./components/Contact";
 import * as Types from "./types";
 
 const project1: Types.Project = {
@@ -31,6 +32,7 @@ function App() {
         <Project project={project1} reversed={false} />
         <Project project={project1} reversed={true} />
       </div>
+      <Contact />
       <div className="mx-auto flex max-w-7xl p-12 lg:px-8">
         <a className="w-full self-center text-center">
           © 2024 Kushal Devkota. All rights reserved

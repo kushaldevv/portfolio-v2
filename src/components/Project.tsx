@@ -48,7 +48,7 @@ function Project({
   const image = (
     <div className="relative aspect-video w-3/4 lg:h-72 lg:w-1/2">
       <div
-        className="absolute -inset-1/2 -translate-x-24"
+        className={`absolute -inset-1/2 -translate-x-24`}
         style={{
           backgroundImage:
             "radial-gradient(circle, #763CAC 0%, #763CAC50 30%, rgba(118, 60, 172, 0) 50%)",
@@ -63,7 +63,7 @@ function Project({
   );
   return (
     <div className="mx-auto flex flex-col items-center px-6 lg:flex lg:max-w-5xl lg:flex-row lg:justify-between">
-      {reversed ? [image, content] : [content, image]}
+        {reversed ? [image, content] : [content, image]}
     </div>
   );
 }
