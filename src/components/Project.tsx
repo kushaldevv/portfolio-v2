@@ -62,7 +62,7 @@ function Project({
     </div>
   );
   return (
-    <div className="mx-auto flex flex-col items-center px-6 lg:flex lg:max-w-5xl lg:flex-row lg:justify-between">
+    <div className="mx-auto flex flex-col items-center px-6 lg:flex lg:max-w-6xl lg:flex-row lg:justify-between">
         {reversed ? [image, content] : [content, image]}
     </div>
   );

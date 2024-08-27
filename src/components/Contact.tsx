@@ -18,21 +18,23 @@
 // import { Field, Label, Switch } from '@headlessui/react'
 
 export default function Contact() {
-
   return (
     // <div className="isolate px-6 py-24 sm:py-32 lg:px-8">
-      <div className="p-8 rounded-2xl mx-auto max-w-2xl mt-28 bg-gradient-to-br from-[#763CAC50] from-0% via-[#6EBFF422] via-75% to-[#4690D401] to-100%  backdrop-blur-md backdrop-filter">
-        <div className="text-center">
+    <div className="mx-auto mt-28 lg:flex max-w-6xl rounded-2xl bg-gradient-to-br from-[#763CAC50] from-0% via-[#6EBFF422] via-75% to-[#4690D401] to-100% p-8 backdrop-blur-md backdrop-filter">
+      <div className="mx-auto w-3/4 lg:w-1/2">
+        <div className="text-left">
           <h2 className="text-4xl font-bold tracking-tight text-white">
             Contact
           </h2>
-          <p className="mt-2 text-lg leading-8 text-white">Get in touch 🗣</p>
+          <p className="mt-2 text-lg font-medium leading-8 text-white">
+            Get in touch 🗣
+          </p>
         </div>
-        <form action="#" method="POST" className="mt-8">
+        <form action="#" method="POST" className="mt-4">
           <div className="grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-2">
             <div className="sm:col-span-2">
               <label
-                htmlFor='name'
+                htmlFor="name"
                 className="block text-sm font-semibold leading-6 text-white"
               >
                 Name
@@ -174,6 +176,7 @@ export default function Contact() {
           </div>
         </form>
       </div>
-    // </div>
+      <div className="mx-auto w-3/4 lg:w-1/2 bg-slate-300">test</div>
+    </div>
   );
 }
