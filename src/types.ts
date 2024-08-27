@@ -5,3 +5,11 @@ export type Project = {
   github?: string;
   demo?: string;
 };
+
+export type Experience = {
+  companyName: string;
+  image: string;
+  shortDescription: string;
+  // date: string;
+  // longDescription: string;
+} 

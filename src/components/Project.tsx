@@ -7,9 +7,9 @@ function Project({
   reversed: boolean;
 }) {
   const content = (
-    <div className="w-3/4 py-2 lg:h-72 lg:w-1/2">
+    <div key={project.title} className="w-3/4 py-2 lg:h-72 lg:w-1/2">
       <div className={`${reversed && "text-right"}`}>
-        <h2 className={`text-4xl font-bold tracking-tight`}>{project.title}</h2>
+        <h2 className={`text-4xl font-bold tracking-tight text-blue-100`}>{project.title}</h2>
         <div>
           {project.techStack.map((item, index) => (
             <span key={index} className={`text-sm font-medium text-purple-400`}>
@@ -22,7 +22,7 @@ function Project({
       <div
         className={`${reversed && "lg:-translate-x-[7.5%]"} relative z-20 mt-5 items-center rounded-lg bg-gradient-to-br from-[#763CAC50] from-0% via-[#6EBFF422] via-75% to-[#4690D401] to-100% p-5 backdrop-blur-md backdrop-filter lg:w-[107.5%]`}
       >
-        <p className="text-sm text-white">{project.description}</p>
+        <p className="text-sm text-blue-100">{project.description}</p>
       </div>
       <div className={`${reversed && "text-right"} mt-5 space-x-2`}>
         {project.github && (
@@ -46,12 +46,12 @@ function Project({
   );
 
   const image = (
-    <div className="relative aspect-video w-3/4 lg:h-72 lg:w-1/2">
+    <div key={project.title + '2'} className="relative aspect-video w-3/4 lg:h-72 lg:w-1/2">
       <div
         className={`absolute -inset-1/2 -translate-x-24`}
         style={{
           backgroundImage:
-            "radial-gradient(circle, #763CAC 0%, #763CAC50 30%, rgba(118, 60, 172, 0) 50%)",
+            "radial-gradient(circle, #763CAC 0%, #763CAC80 30%, rgba(118, 60, 172, 0) 45%)",
         }}
       />
       <div className="bg-navbar relative h-full w-full overflow-hidden rounded-lg">

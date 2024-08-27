@@ -1,6 +1,8 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Experience from "./components/Experience";
+import Skills from "./components/Skills";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
 import * as Types from "./types";
@@ -21,18 +23,23 @@ const project1: Types.Project = {
   demo: "https://github.com/kushaldevv",
 };
 
+const projects : Types.Project[] = [project1, project1, project1, project1]
+
 function App() {
   return (
-    <div>
+    <>
       <Navbar />
       <Hero />
-      <div className="space-y-14 lg:space-y-28">
-        <Project project={project1} reversed={false} />
-        <Project project={project1} reversed={true} />
-        <Project project={project1} reversed={false} />
-        <Project project={project1} reversed={true} />
+      <div className="space-y-20 lg:space-y-32 mt-20 lg:mt-0">
+      <Experience />
+      <Skills />
+      <div className="space-y-14 lg:space-y-36">
+        {projects.map((project, index) => (
+           <Project key={index} project={project} reversed={index % 2 == 1} />
+        ))}
       </div>
       <Contact />
+      </div>
       <div className="mx-auto flex max-w-7xl p-12 lg:px-8">
         <a className="w-full self-center text-center">
           © 2024 Kushal Devkota. All rights reserved
@@ -40,7 +47,7 @@ function App() {
           Built with ❤️ in Maryland, US
         </a>
       </div>
-    </div>
+    </>
   );
 }
 
