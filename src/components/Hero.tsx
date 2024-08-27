@@ -18,9 +18,13 @@ function Hero() {
           </div>
           <div className="text-left">
             <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-6xl">
-              Hello, I'm <span className="bg-gradient-to-br from-purple-400 to-accent text-transparent bg-clip-text font-bold">Kushal</span> 👋 .
+              Hello, I'm{" "}
+              <span className="to-accent bg-gradient-to-br from-purple-400 bg-clip-text font-bold text-transparent">
+                Kushal
+              </span>{" "}
+              👋 .
             </h1>
-            <p className="mt-6 mb-10 text-xl leading-8 text-gray-300">
+            <p className="mb-10 mt-6 text-xl leading-8 text-gray-300">
               I'm a <strong>Software Engineer</strong> based in Maryland, driven
               by the challenge of transforming concepts into innovative software
               solutions.
@@ -31,11 +35,16 @@ function Hero() {
             </p>
             <a
               href="#"
-              className="bg-gradient-to-br from-purple-500 to-accent hover:bg-gradient-to-br hover:from-purple-600 hover:to-purple-900 rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              className="to-accent rounded-md bg-gradient-to-br from-purple-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gradient-to-br hover:from-purple-600 hover:to-purple-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Message
             </a>
-            <a href="#" className="ml-6 text-sm font-semibold leading-6 text-white hover:text-gray-300">Scroll down<span aria-hidden="true">  ↓</span></a>
+            <a
+              href="#"
+              className="ml-6 text-sm font-semibold leading-6 text-white hover:text-gray-300"
+            >
+              Scroll down<span aria-hidden="true"> ↓</span>
+            </a>
           </div>
         </div>
       </div>
