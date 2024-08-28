@@ -1,8 +1,9 @@
 import RadialGradient from "./RadialGradient";
+import { scrollTo } from "./util";
 
 function Hero() {
   return (
-    <section className="h-dvh px-6 py-32 sm:py-48 lg:px-8 lg:py-72">
+    <section id='hero' className="h-dvh px-6 py-32 sm:py-48 lg:px-8 lg:py-72">
       <div className="mx-auto max-w-5xl">
         <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-20">
           <div className="relative mx-auto my-auto mb-8 aspect-square w-full max-w-[275px] items-center lg:mx-0 lg:mb-0">
@@ -34,14 +35,18 @@ function Hero() {
               various platforms.
             </p>
             <a
-              href="#"
-              className="to-accent rounded-md bg-gradient-to-br from-purple-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gradient-to-br hover:from-purple-600 hover:to-purple-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              onClick={() => {
+                scrollTo("contact");
+              }}
+              className="to-accent cursor-pointer rounded-md bg-gradient-to-br from-purple-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gradient-to-br hover:from-purple-600 hover:to-purple-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Message
             </a>
             <a
-              href="#"
-              className="ml-6 text-sm font-semibold leading-6 text-white hover:text-gray-300"
+              onClick={() => {
+                scrollTo("experience");
+              }}
+              className="ml-6 cursor-pointer text-sm font-semibold leading-6 text-white hover:text-gray-300"
             >
               Scroll down<span aria-hidden="true"> ↓</span>
             </a>
