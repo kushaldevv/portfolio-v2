@@ -6,6 +6,7 @@ import Skills from "./components/Skills";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
 import * as Types from "./types";
+// import { useRef } from "react";
 
 const project1: Types.Project = {
   title: "GAINZ",
@@ -23,22 +24,28 @@ const project1: Types.Project = {
   demo: "https://github.com/kushaldevv",
 };
 
-const projects : Types.Project[] = [project1, project1, project1, project1]
+const projects: Types.Project[] = [project1, project1, project1, project1];
 
 function App() {
+  // const contactRef = useRef<HTMLElement | null>(null);
+  
+  // const handleScroll = () => {
+  //   contactRef.current?.scrollIntoView({ behavior: "smooth" });
+  // };
+
   return (
     <>
       <Navbar />
       <Hero />
-      <div className="space-y-20 lg:space-y-32 mt-20 lg:mt-0">
-      <Experience />
-      <Skills />
-      <div className="space-y-36 lg:space-y-44">
-        {projects.map((project, index) => (
-           <Project key={index} project={project} reversed={index % 2 == 1} />
-        ))}
-      </div>
-      <Contact />
+      <div className="mt-20 space-y-20 lg:mt-0 lg:space-y-32">
+        <Experience />
+        <Skills />
+        <div id='projects' className="space-y-36 lg:space-y-44">
+          {projects.map((project, index) => (
+            <Project key={index} project={project} reversed={index % 2 == 1} />
+          ))}
+        </div>
+        <Contact />
       </div>
       <div className="mx-auto flex max-w-7xl p-10 pt-24 lg:px-8">
         <a className="w-full self-center text-center">

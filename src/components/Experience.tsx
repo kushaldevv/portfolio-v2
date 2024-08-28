@@ -1,15 +1,18 @@
 import * as Types from "../types";
+import contructionUrl from '../assets/construction.png'
+import devtaxUrl from '../assets/devtax.png'
+
 
 const experience1: Types.Experience = {
   companyName: "Dev Tax & Accounting",
-  image: "",
+  image: devtaxUrl,
   date: "May 2022 - August 2023",
   shortDescription: "Fullstack Software Engineer intern",
 };
 
 const experience2: Types.Experience = {
-  companyName: "Company Name",
-  image: "",
+  companyName: "Under Construction",
+  image: contructionUrl,
   date: "",
   shortDescription: "",
 };
@@ -18,7 +21,7 @@ const experiences: Types.Experience[] = [experience1, experience2];
 
 function Experience() {
   return (
-    <div className="mx-auto max-w-6xl px-3">
+    <div id='experience' className="mx-auto max-w-6xl px-3">
       <h2 className="mb-8 text-center text-5xl font-bold tracking-tight text-white">
         Experience
       </h2>
@@ -35,7 +38,7 @@ function Experience() {
             <img
               src={experience.image}
               alt={experience.companyName}
-              className="aspect-square w-28 bg-red-400"
+              className="aspect-square w-32 rounded-lg"
             />
             <div className="ml-4 text-left">
               <h2 className="text-2xl font-semibold text-white">

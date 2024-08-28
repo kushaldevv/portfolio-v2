@@ -76,7 +76,7 @@ export default function Contact() {
   }, [error]);
 
   return (
-    <div className="mx-auto flex flex-col px-3 lg:flex lg:max-w-6xl lg:flex-row">
+    <div id='contact' className="mx-auto flex flex-col px-3 lg:flex lg:max-w-6xl lg:flex-row">
       <Toaster position="top-center" richColors />
       <div className="mx-auto mb-5 flex min-h-[22rem] w-full max-w-[36rem] flex-col justify-between lg:mb-0">
         <div>
@@ -194,6 +194,7 @@ export default function Contact() {
             </div>
           </div>
           <button
+            disabled={loading}
             type="submit"
             className="to-accent mt-4 flex w-full items-center justify-center rounded-md bg-gradient-to-br from-purple-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gradient-to-br hover:from-purple-600 hover:to-purple-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >

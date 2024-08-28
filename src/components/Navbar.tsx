@@ -5,6 +5,8 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import SocialIcons from "./SocialIcons";
+import { scrollTo } from "./util";
+import resumeUrl from "../assets/Kushal Devkota|Resume.pdf";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -13,10 +15,10 @@ export default function Navbar() {
     <header className="bg-navbar fixed z-50 w-full">
       <nav
         aria-label="Global"
-        className="mx-auto flex max-w-6xl items-center justify-between py-6 px-3"
+        className="mx-auto flex max-w-6xl items-center justify-between px-3 py-6"
       >
         <div className="flex lg:flex-1">
-          <AnimatedLink href="#">
+          <AnimatedLink id="hero">
             <span className="font-fugaz text-4xl">KD</span>
           </AnimatedLink>
         </div>
@@ -33,10 +35,10 @@ export default function Navbar() {
           )}
         </div>
         <div className="hidden text-white lg:flex lg:gap-x-12">
-          <AnimatedLink href="#">Experience</AnimatedLink>
-          <AnimatedLink href="#">Projects</AnimatedLink>
-          <AnimatedLink href="#">Resume</AnimatedLink>
-          <AnimatedLink href="#">Contact</AnimatedLink>
+          <AnimatedLink id="experience">Experience</AnimatedLink>
+          <AnimatedLink id="projects">Projects</AnimatedLink>
+          <AnimatedLink id="resume">Resume</AnimatedLink>
+          <AnimatedLink id="contact">Contact</AnimatedLink>
         </div>
         <div className="hidden items-center space-x-5 lg:flex lg:flex-1 lg:justify-end">
           <SocialIcons />
@@ -61,8 +63,16 @@ export default function Navbar() {
             >
               <DialogPanel>
                 <div className="flex items-center justify-between">
-                  <AnimatedLink href="#">
-                    <a className="font-fugaz text-4xl">KD</a>
+                  <AnimatedLink id="hero">
+                    <a
+                      className="font-fugaz text-4xl"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        scrollTo("hero");
+                      }}
+                    >
+                      KD
+                    </a>
                   </AnimatedLink>
 
                   {mobileMenuOpen && (
@@ -80,26 +90,37 @@ export default function Navbar() {
                   {/* <div className="-my-6 divide-y divide-gray-500/10"> */}
                   <div className="space-y-2 py-6 text-white">
                     <a
-                      href="#"
-                      className="hover:bg-accent/50 -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        scrollTo("experience");
+                      }}
+                      className="hover:bg-accent/50 -mx-3 block cursor-pointer rounded-lg px-3 py-2 text-base font-semibold leading-7"
                     >
                       Experience
                     </a>
                     <a
-                      href="#"
-                      className="hover:bg-accent/50 -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        scrollTo("projects");
+                      }}
+                      className="hover:bg-accent/50 -mx-3 block cursor-pointer rounded-lg px-3 py-2 text-base font-semibold leading-7"
                     >
                       Projects
                     </a>
                     <a
-                      href="#"
-                      className="hover:bg-accent/50 -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7"
+                      onClick={() => {
+                        window.open(resumeUrl, "_blank");
+                      }}
+                      className="hover:bg-accent/50 -mx-3 block cursor-pointer rounded-lg px-3 py-2 text-base font-semibold leading-7"
                     >
                       Resume
                     </a>
                     <a
-                      href="#"
-                      className="hover:bg-accent/50 -mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        scrollTo("contact");
+                      }}
+                      className="hover:bg-accent/50 -mx-3 block cursor-pointer rounded-lg px-3 py-2.5 text-base font-semibold leading-7"
                     >
                       Contact
                     </a>
@@ -131,14 +152,16 @@ export default function Navbar() {
 //   );
 // };
 
-const AnimatedLink = ({ href, children }: { href: string; children: any }) => {
+const AnimatedLink = ({ id, children }: { id: string; children: any }) => {
   return (
     <motion.a
-      href={href}
-      className={`relative text-sm font-semibold leading-6`}
+      className={`relative cursor-pointer text-sm font-semibold leading-6`}
       whileHover="hover"
       initial="initial"
       style={{ transformStyle: "preserve-3d" }}
+      onClick={() =>
+        id === "resume" ? window.open(resumeUrl, "_blank") : scrollTo(id)
+      }
     >
       {children}
       <motion.span
