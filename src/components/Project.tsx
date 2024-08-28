@@ -26,18 +26,28 @@ function Project({
       >
         <p className="text-sm text-blue-100">{project.description}</p>
       </div>
-      <div className={`${reversed && "text-right"} my-5 space-x-2`}>
+      <div className={`${reversed && "justify-end"} my-5 flex space-x-2`}>
         {project.github && (
           <button
-            className="rounded-lg bg-white p-1.5 px-4 text-sm font-semibold text-purple-900 hover:bg-gray-300"
+            className="flex items-center rounded-lg bg-white p-1.5 px-4 text-sm font-semibold text-purple-900 hover:bg-gray-300"
             onClick={() => window.open(project.github, "_blank")}
           >
             Github
+            <svg
+              className="ml-2 size-4 fill-accent"
+              focusable="false"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              data-testid="GitHubIcon"
+              
+            >
+              <path d="M12 1.27a11 11 0 00-3.48 21.46c.55.09.73-.28.73-.55v-1.84c-3.03.64-3.67-1.46-3.67-1.46-.55-1.29-1.28-1.65-1.28-1.65-.92-.65.1-.65.1-.65 1.1 0 1.73 1.1 1.73 1.1.92 1.65 2.57 1.2 3.21.92a2 2 0 01.64-1.47c-2.47-.27-5.04-1.19-5.04-5.5 0-1.1.46-2.1 1.2-2.84a3.76 3.76 0 010-2.93s.91-.28 3.11 1.1c1.8-.49 3.7-.49 5.5 0 2.1-1.38 3.02-1.1 3.02-1.1a3.76 3.76 0 010 2.93c.83.74 1.2 1.74 1.2 2.94 0 4.21-2.57 5.13-5.04 5.4.45.37.82.92.82 2.02v3.03c0 .27.1.64.73.55A11 11 0 0012 1.27"></path>
+            </svg>
           </button>
         )}
         {project.demo && (
           <button
-            className="flex rounded-lg bg-white p-1.5 px-4 text-sm font-semibold text-purple-900 hover:bg-gray-300"
+            className="flex items-center rounded-lg bg-white p-1.5 px-4 text-sm font-semibold text-purple-900 hover:bg-gray-300"
             onClick={() => window.open(project.demo, "_blank")}
           >
             Demo
@@ -45,7 +55,7 @@ function Project({
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              className="size-5"
+              className="ml-2 size-4"
             >
               <path
                 fillRule="evenodd"

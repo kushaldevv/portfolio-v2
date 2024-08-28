@@ -37,13 +37,13 @@ function Experience() {
               alt={experience.companyName}
               className="aspect-square w-28 bg-red-400"
             />
-            <div className="ml-4 text-center">
+            <div className="ml-4 text-left">
               <h2 className="text-2xl font-semibold text-white">
                 {experience.companyName}
               </h2>
               <p className="text-xs">{experience.shortDescription}</p>
               <p className="text-xs text-gray-400">{experience.date}</p>
-              <button className="bg-accent/15 border-accent mt-3 rounded-2xl border-2 px-4 py-2 text-xs font-medium text-white">
+              <button className="bg-accent/15 border-accent mt-3 rounded-xl border-2 px-4 py-2 text-xs font-medium text-white hover:bg-accent/50">
                 Learn More
               </button>
             </div>
