@@ -9,7 +9,7 @@ function Project({
   const content = (
     <div key={project.title} className="max-w-[36rem]">
       <div className={`${reversed && "text-right"}`}>
-        <h2 className={`text-4xl font-bold tracking-tight text-blue-100`}>
+        <h2 className={`text-4xl font-bold tracking-tight font-white`}>
           {project.title}
         </h2>
         <div>
