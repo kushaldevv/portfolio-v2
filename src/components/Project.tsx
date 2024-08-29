@@ -78,14 +78,14 @@ function Project({
         className={`absolute -inset-1/2 -translate-x-24`}
         style={{
           backgroundImage:
-            "radial-gradient(circle, #763CAC 0%, #763CAC80 30%, rgba(118, 60, 172, 0) 45%)",
+            "radial-gradient(circle, #763CAC 0%, #8225d980 25%, rgba(118, 60, 172, 0) 42.5%)",
         }}
       />
       <div className="bg-navbar relative h-full w-full overflow-hidden rounded-lg">
         <div
-          className={`absolute bottom-0 ${reversed ? "left-0 rounded-tr-xl" : "right-0 rounded-tl-xl"} h-[93.5%] w-[97%] bg-gray-100`}
+          className={`absolute bottom-0 ${reversed ? "left-0 rounded-tr-xl" : "right-0 rounded-tl-xl"} h-[93.5%] w-[97%] overflow-hidden`}
         >
-          🗿
+          <img src={project.image} alt={project.title} className="h-full w-full object-cover transition-all duration-1000 ease-in-out hover:opacity-50 hover:scale-110 transform" />
         </div>
       </div>
     </div>

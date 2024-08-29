@@ -32,7 +32,7 @@ export default function Contact() {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1000));
+    await new Promise((r) => setTimeout(r, 500));
     emailjs
       .send(
         "service_79nih4o",
