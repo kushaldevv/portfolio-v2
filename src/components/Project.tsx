@@ -29,7 +29,7 @@ function Project({
       <div className={`${reversed && "justify-end"} my-5 flex space-x-2`}>
         {project.github && (
           <button
-            className="flex items-center rounded-lg bg-white p-1.5 px-4 text-sm font-semibold text-purple-900 hover:bg-gray-300"
+            className="z-20 flex items-center rounded-lg bg-white p-1.5 px-4 text-sm font-semibold text-purple-900 hover:bg-gray-300"
             onClick={() => window.open(project.github, "_blank")}
           >
             Github
@@ -47,7 +47,7 @@ function Project({
         )}
         {project.demo && (
           <button
-            className="flex items-center rounded-lg bg-white p-1.5 px-4 text-sm font-semibold text-purple-900 hover:bg-gray-300"
+            className="z-20 flex items-center rounded-lg bg-white p-1.5 px-4 text-sm font-semibold text-purple-900 hover:bg-gray-300"
             onClick={() => window.open(project.demo, "_blank")}
           >
             Demo

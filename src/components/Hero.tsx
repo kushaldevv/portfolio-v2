@@ -13,7 +13,7 @@ function Hero() {
             </div>
             <img
               src={kdevUrl}
-              className="relative z-20 mt-10 rounded-full object-cover opacity-70 sm:mt-0 sm:h-full sm:w-full "
+              className="relative z-20 mt-10 rounded-full object-cover opacity-80 sm:mt-0 sm:h-full sm:w-full "
               alt="Kushal's avatar"
             />
           </div>
