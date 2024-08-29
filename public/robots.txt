@@ -1,0 +1,13 @@
+# Allow all robots to crawl the site
+User-agent: *
+Allow: /
+
+# Optionally, prevent crawling of specific directories
+# Disallow: /admin/
+# Disallow: /drafts/
+
+# Sitemap location (if you have one)
+Sitemap: https://www.kdev.app/sitemap.xml
+
+# Crawl-delay for all bots (optional, adjust as needed)
+# Crawl-delay: 10
