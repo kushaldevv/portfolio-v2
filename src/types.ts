@@ -2,6 +2,7 @@ export type Project = {
   title: string;
   techStack: string[];
   description: string;
+  image: string;
   github?: string;
   demo?: string;
 };
@@ -11,5 +12,5 @@ export type Experience = {
   image: string;
   shortDescription: string;
   date: string;
-  // longDescription: string;
+  longDescription: string[];
 } 
