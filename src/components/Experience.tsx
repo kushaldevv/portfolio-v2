@@ -22,7 +22,7 @@ const experience2: Types.Experience = {
   image: contructionUrl,
   date: "",
   shortDescription: "",
-  longDescription: ["This section is under construction. Please check back later."],
+  longDescription: ["This section is under construction. Please check back later. 🗿"],
 };
 
 const experiences: Types.Experience[] = [experience1, experience2];
