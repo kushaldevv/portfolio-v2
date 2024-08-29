@@ -4,16 +4,16 @@ import kdevUrl from "../assets//kdev.png";
 
 function Hero() {
   return (
-    <section id="hero" className="h-dvh px-6 py-32 sm:py-48 lg:px-8 lg:py-72">
+    <section id="hero" className="px-6 py-32 sm:py-48 lg:px-8 lg:py-72">
       <div className="mx-auto max-w-5xl">
         <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-20">
           <div className="relative mx-auto my-auto mb-8 aspect-square w-full max-w-[275px] items-center lg:mx-0 lg:mb-0">
-            <div className="absolute inset-0 z-10 translate-x-[-20%] translate-y-[-20%]">
+            <div className="absolute inset-0 z-10 translate-x-[-22.5%] translate-y-[-20%]">
               <RadialGradient width={400} height={400} className="absolute" />
             </div>
             <img
               src={kdevUrl}
-              className="relative z-20 mt-16 h-3/4 w-3/4 rounded-full object-cover opacity-70 sm:mt-0 sm:h-full sm:w-full"
+              className="relative z-20 mt-10 rounded-full object-cover opacity-70 sm:mt-0 sm:h-full sm:w-full "
               alt="Kushal's avatar"
             />
           </div>

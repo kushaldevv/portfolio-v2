@@ -58,7 +58,7 @@ export default function Navbar() {
               initial={{ x: "100%" }}
               animate={{ x: -2 }}
               exit={{ x: "100%" }}
-              transition={{ type: "spring", stiffness: 300, damping: 40 }}
+              transition={{ type: 'tween', stiffness: 300, damping: 40 }}
               className="bg-navbar sm:ring-accent/50 fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1"
             >
               <DialogPanel>
@@ -92,7 +92,9 @@ export default function Navbar() {
                     <a
                       onClick={() => {
                         setMobileMenuOpen(false);
-                        scrollTo("experience");
+                        setTimeout(() => {
+                          scrollTo("experience");
+                        }, 500); // Adjust this delay as needed
                       }}
                       className="hover:bg-accent/50 -mx-3 block cursor-pointer rounded-lg px-3 py-2 text-base font-semibold leading-7"
                     >
@@ -101,7 +103,9 @@ export default function Navbar() {
                     <a
                       onClick={() => {
                         setMobileMenuOpen(false);
+                        setTimeout(() => {
                         scrollTo("projects");
+                        },500);
                       }}
                       className="hover:bg-accent/50 -mx-3 block cursor-pointer rounded-lg px-3 py-2 text-base font-semibold leading-7"
                     >
@@ -118,7 +122,9 @@ export default function Navbar() {
                     <a
                       onClick={() => {
                         setMobileMenuOpen(false);
+                        setTimeout(() => {
                         scrollTo("contact");
+                        },500);
                       }}
                       className="hover:bg-accent/50 -mx-3 block cursor-pointer rounded-lg px-3 py-2.5 text-base font-semibold leading-7"
                     >

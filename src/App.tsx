@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import * as Types from "./types";
 import terpExchangeUrl from "./assets/terpExchange.png";
 import sortingUrl from "./assets/sorting.png";
+import comingSoonUrl from "./assets/comingSoon.png";
 
 // import { useRef } from "react";
 
@@ -23,7 +24,7 @@ const project1: Types.Project = {
   ],
   description:
     "Co-developed a React Native/Expo mobile app for fitness tracking and social networking. Designed a RESTful API on AWS using API Gateway and Lambda functions to manage and process data with DynamoDB. Integrated Clerk for user authentication and built the frontend using TypeScript and Tamagui.",
-  image: "",
+  image: comingSoonUrl,
   github: "https://github.com/kushaldevv/",
   demo: "https://github.com/kushaldevv",
 };
@@ -48,7 +49,7 @@ const project3: Types.Project = {
   demo: "https://www.youtube.com/watch?v=CR91i9f5n8U",
 };
 
-const projects: Types.Project[] = [project1, project2, project3, project1];
+const projects: Types.Project[] = [project1, project2, project3];
 
 function App() {
   // const contactRef = useRef<HTMLElement | null>(null);
@@ -61,7 +62,7 @@ function App() {
     <>
       <Navbar />
       <Hero />
-      <div className="mt-20 space-y-20 lg:mt-0 lg:space-y-32">
+      <div className="space-y-20 lg:space-y-32">
         <div className="space-y-20 lg:space-y-28">
           <Experience />
           <Tools />
@@ -77,7 +78,7 @@ function App() {
         <a className="w-full self-center text-center">
           © 2024 Kushal Devkota. All rights reserved
           <br />
-          Built with ❤️ in Maryland, US
+          Built with <span className="animate-pulse">❤️</span>  in Maryland, US
         </a>
       </div>
     </>
