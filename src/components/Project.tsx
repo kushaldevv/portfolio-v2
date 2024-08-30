@@ -85,7 +85,7 @@ function Project({
         <div
           className={`absolute bottom-0 ${reversed ? "left-0 rounded-tr-xl" : "right-0 rounded-tl-xl"} h-[93.5%] w-[97%] overflow-hidden`}
         >
-          <img src={project.image} alt={project.title} className="h-full w-full object-cover transition-all duration-1000 ease-in-out hover:opacity-50 hover:scale-110 transform" />
+          <img src={project.image} alt={project.title} className="h-full w-full bg-slate-100 object-contain transition-all duration-1000 ease-in-out hover:opacity-50 hover:scale-110 transform" />
         </div>
       </div>
     </div>

@@ -10,7 +10,7 @@ const experience1: Types.Experience = {
   date: "May 2022 - August 2023",
   shortDescription: "Fullstack Software Engineer intern",
   longDescription: [
-    "• Developed a fully responsive website using React.js and Chakra UI.",
+    `• Developed a fully responsive website using React.js and Chakra UI.`,
     "• Integrated a secure file transfer system for users to upload files securely, while also implementing backend email functionality for the contact form to ensure seamless communication.",
     "• Executed SEO best practices, including establishing a sitemap, implementing semantic HTML, and optimizing keywords, resulting in a 25% increase in customer engagement.",
     "• Launched AWS EC2 virtual servers to enable remote work and increase employee access. Configured security and networking settings for client data protection"

@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import * as Types from "./types";
 import terpExchangeUrl from "./assets/terpExchange.png";
 import sortingUrl from "./assets/sorting.png";
+import gainzUrl from "./assets/gainz.png";
 import comingSoonUrl from "./assets/comingSoon.png";
 
 // import { useRef } from "react";
@@ -24,9 +25,9 @@ const project1: Types.Project = {
   ],
   description:
     "Co-developed a React Native/Expo mobile app for fitness tracking and social networking. Designed a RESTful API on AWS using API Gateway and Lambda functions to manage and process data with DynamoDB. Integrated Clerk for user authentication and built the frontend using TypeScript and Tamagui.",
-  image: comingSoonUrl,
-  github: "https://github.com/kushaldevv/",
-  demo: "https://github.com/kushaldevv",
+  image: gainzUrl,
+  github: "https://github.com/kushaldevv/gainzApp",
+  demo: "https://www.youtube.com/watch?v=iAC8FYCfB2A",
 };
 
 const project2: Types.Project = {

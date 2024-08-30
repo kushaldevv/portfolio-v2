@@ -12,5 +12,5 @@ export type Experience = {
   image: string;
   shortDescription: string;
   date: string;
-  longDescription: string[];
+  longDescription: string [];
 } 

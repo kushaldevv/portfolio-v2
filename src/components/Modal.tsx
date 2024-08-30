@@ -35,9 +35,9 @@ export default function Modal({
                 <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
                   <DialogTitle
                     as="h3"
-                    className="text-base font-semibold leading-6 text-gray-900"
+                    className={`text-base font-semibold leading-6 text-gray-900 text-center ${title ==='Dev Tax & Accounting' && 'underline'}`}
                   >
-                    {title}
+                    <a  href={title ==='Dev Tax & Accounting' && "https://www.devtaxes.com" || undefined} target="_blank">{title}</a>
                   </DialogTitle>
                   <div className="mt-2">
                     <p className="text-left text-sm leading-6 text-gray-500">
