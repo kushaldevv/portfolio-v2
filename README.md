@@ -1,50 +1,33 @@
-# React + TypeScript + Vite
+# Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## This is a fully responsive personal portfolio website using React, Vite, Typescript, Tailwind.
 
-Currently, two official plugins are available:
+# *Domain:* https://kdev.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img width="1281" alt="image" src="https://github.com/user-attachments/assets/6da3be48-243d-423c-a5a9-8af97ba80d12">
 
-## Expanding the ESLint configuration
+## `Google Firebase - Web Hosting Provider`
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+# SEO (Search Engine Optimization) Practices 
 
-- Configure the top-level `parserOptions` property like this:
+## `Sitemap`
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+A sitemap is made in XML (Extensible Markup Language) and is primarily used as a way for AI to index your site easier. Search engines like Google use XML sitemaps to store your site’s pages more efficiently, producing better results when people search for related terms.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **Sitemap URL:** https://kdev.app/sitemap.xml
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **Posted Sitemap on Google Search Console:** https://search.google.com/search-console/about
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## `Google Search Console`
+
+Google Search Console is a web service by Google which allows webmasters to check indexing status, search queries, crawling errors and optimize visibility of their websites.
+
+* Log into account -> Enter domain name of website -> Copy TXT record into the DNS configuration for https://kdev.app/ in Firebase
+
+* Once sitemap.xml is created go to -> Sitemaps tab -> Add a new sitemap URL and it should be good to go 
+
+## `Robots.txt`
+
+A robots.txt file tells search engines what your website's rules of engagement are. A big part of doing SEO is about sending the right signals to search engines, and the robots.txt is one of the ways to communicate your crawling preferences to search engines.
+
+**URL:** https://kdev.app/robots.txt
