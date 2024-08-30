@@ -9,7 +9,7 @@ import * as Types from "./types";
 import terpExchangeUrl from "./assets/terpExchange.png";
 import sortingUrl from "./assets/sorting.png";
 import gainzUrl from "./assets/gainz.png";
-import comingSoonUrl from "./assets/comingSoon.png";
+// import comingSoonUrl from "./assets/comingSoon.png";
 
 // import { useRef } from "react";
 
