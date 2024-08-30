@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-## This is a fully responsive personal portfolio website using React, Vite, Typescript, Tailwind.
+## Stack: React, Vite, Typescript, Tailwind
 
 # *Domain:* https://kdev.app/
 
