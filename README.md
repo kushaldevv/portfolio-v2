@@ -3,7 +3,6 @@
 ## Stack: React, Vite, Typescript, Tailwind
 
 # *Domain:* https://kdev.app/
-
 <img width="1281" alt="image" src="https://github.com/user-attachments/assets/6da3be48-243d-423c-a5a9-8af97ba80d12">
 
 ## `Google Firebase - Web Hosting Provider`
