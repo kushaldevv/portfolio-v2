@@ -13,7 +13,7 @@ import nodeLogo from "../assets/logos/node.svg";
 import expressLogo from "../assets/logos/express.svg";
 import tamaguiLogo from "../assets/logos/tamagui.svg";
 import gitLogo from "../assets/logos/git.svg";
-
+// ;)
 const tools = [
   { name: "Java", logo: javaLogo },
   { name: "Python", logo: pythonLogo },
