@@ -36,9 +36,9 @@ function Experience() {
         Experience
       </h2>
       <div className="flex flex-col items-center lg:flex-row lg:justify-center lg:space-x-4">
-        {experiences.map((experience, index) => (
+        {experiences.map((experience) => (
           <div
-            key={index}
+            key={experience.companyName}
             className="border-accent mb-4 flex h-48 w-full max-w-[36rem] items-center justify-center rounded-lg border-t-4 lg:mb-0"
             style={{
               backgroundImage:

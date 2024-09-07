@@ -1,7 +1,7 @@
 import RadialGradient from "./RadialGradient";
 import { scrollTo } from "./util";
 import kdevUrl from "../assets//kdev.png";
-import { delay, motion } from 'framer-motion';
+import {  motion } from 'framer-motion';
 
 function Hero() {
   const containerVariants = {
