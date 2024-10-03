@@ -63,9 +63,8 @@ function Hero() {
               className="mb-10 mt-6 text-xl leading-8 text-gray-300"
               variants={itemVariants}
             >
-              I'm a <strong>Software Engineer</strong> based in Maryland, driven
-              by the challenge of transforming concepts into innovative software
-              solutions.
+              I'm a <strong>Software Engineer</strong> with a bachelors of science in 
+              Computer Science from University of Maryland, College Park.
               <br />
               Dive into my latest experience, projects, and education, where I
               showcase my expertise in creating cutting-edge technology across
