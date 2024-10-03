@@ -7,13 +7,13 @@ import Modal from "./Modal";
 const experience1: Types.Experience = {
   companyName: "Dev Tax & Accounting",
   image: devtaxUrl,
-  date: "May 2022 - August 2023",
+  date: "June 2023 - May 2024",
   shortDescription: "Fullstack Software Engineer intern",
   longDescription: [
-    `• Developed a fully responsive website using React.js and Chakra UI.`,
-    "• Integrated a secure file transfer system for users to upload files securely, while also implementing backend email functionality for the contact form to ensure seamless communication.",
-    "• Executed SEO best practices, including establishing a sitemap, implementing semantic HTML, and optimizing keywords, resulting in a 25% increase in customer engagement.",
-    "• Launched AWS EC2 virtual servers to enable remote work and increase employee access. Configured security and networking settings for client data protection"
+    `• Developed a fully responsive website using React.js and Chakra UI, increasing user engagement by 30%`,
+    "• Created a client portal with Firebase and Next.js, boosting accountants’ productivity by streamlining data organization and tracking",
+    "• Automated monthly FICA tax payments using UiPath automation for 15+ clients, handling payments up to $10,000",
+    "• Deployed AWS EC2 servers for remote work, enhancing team productivity and ensuring client data security with advanced configurations"
   ],
 };
 
