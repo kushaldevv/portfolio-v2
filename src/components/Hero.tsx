@@ -33,6 +33,7 @@ function Hero() {
       animate="visible"
       variants={containerVariants}
     >
+      <br/>
       <div className="mx-auto max-w-5xl">
         <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-20">
           <motion.div 
