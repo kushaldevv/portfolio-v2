@@ -12,7 +12,7 @@ const experience1: Types.Experience = {
   longDescription: [
     `• Developed a fully responsive website using React.js and Chakra UI, increasing user engagement by 30%`,
     "• Created a client portal with Firebase and Next.js, boosting accountants’ productivity by streamlining data organization and tracking",
-    "• Automated monthly FICA tax payments using UiPath automation for 15+ clients, handling payments up to $10,000",
+    "• Developed an automation script using Python Selenium to process monthly tax payments, increasing efficiency and minimizing errors in handling payments up to $10,000",
     "• Deployed AWS EC2 servers for remote work, enhancing team productivity and ensuring client data security with advanced configurations"
   ],
 };
