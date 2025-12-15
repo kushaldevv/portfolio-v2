@@ -1,7 +1,7 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Experience from "./components/Experience";
+// import Experience from "./components/Experience";
 import Tools from "./components/Tools";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
@@ -65,7 +65,7 @@ function App() {
       <Hero />
       <div className="space-y-20 lg:space-y-32">
         <div className="space-y-20 lg:space-y-28">
-          <Experience />
+          {/* <Experience /> */}
           <Tools />
         </div>
         <div id="projects" className="space-y-36 lg:space-y-44">

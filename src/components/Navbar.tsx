@@ -35,10 +35,10 @@ export default function Navbar() {
           )}
         </div>
         <div className="hidden text-white lg:flex lg:gap-x-12">
-          <AnimatedLink id="experience">Experience</AnimatedLink>
-          <AnimatedLink id="projects">Projects</AnimatedLink>
-          <AnimatedLink id="resume">Resume</AnimatedLink>
-          <AnimatedLink id="contact">Contact</AnimatedLink>
+          {/* <AnimatedLink id="experience">Experience</AnimatedLink> */}
+          {/* <AnimatedLink id="projects">Projects</AnimatedLink> */}
+          {/* <AnimatedLink id="resume">Resume</AnimatedLink> */}
+          {/* <AnimatedLink id="contact">Contact</AnimatedLink> */}
         </div>
         <div className="hidden items-center space-x-5 lg:flex lg:flex-1 lg:justify-end">
           <SocialIcons />
